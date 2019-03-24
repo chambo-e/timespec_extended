@@ -46,7 +46,7 @@ struct timespec		*timespec_init(struct timespec *base)
 void			timespec_update(struct timespec *time)
 {
   assert(time != NULL);
-#if defined(_POSIX_C_SOURCE)
+#if defined(_POSIX_C_SOURCE) || defined(__APPLE__)
   if (clock_gettime(CLOCK_BOOTTIME, time))
     perror("clock_gettime");
 #else

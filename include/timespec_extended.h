@@ -17,6 +17,10 @@
 #include <errno.h>
 #include <stdio.h>
 
+#ifndef CLOCK_BOOTTIME
+#define CLOCK_BOOTTIME CLOCK_MONOTONIC_RAW
+#endif
+
 /*
 **	timespec_add.c
 */

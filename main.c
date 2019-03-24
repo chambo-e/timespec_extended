@@ -18,8 +18,11 @@ int main()
 
   while (1)
     {
-      printf("%u %u\n", now->tv_sec, now->tv_nsec);
+      printf("%ld %ld\n", now->tv_sec, now->tv_nsec);
+      timespec_t	*n = timespec_now();
+      printf("%d\n", timespec_is_lower(now, n));
+      printf("%d\n", timespec_is_greater(now, n));
       timespec_update(now);
-      sleep(1);
+      usleep(1000);
     }
 }

@@ -8,7 +8,7 @@
 
 DEBUG		=	yes
 
-CC		=	gcc
+CC		=	gcc-6
 
 RM		=	rm -fr
 
